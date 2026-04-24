@@ -90,7 +90,7 @@ func (r *postgresRepo) List(ctx context.Context, filter ListFilter) ([]Todo, err
 func (r *postgresRepo) Update(ctx context.Context, t *Todo) error {
 	query := `
 		UPDATE todos
-		SET title=$1, description=$2, done=$3, priority=$4, due_date=$5, update_at=$6
+		SET title=$1, description=$2, done=$3, priority=$4, due_date=$5, updated_at=$6
 		WHERE id=$7`
 
 	t.UpdatedAt = time.Now()
@@ -106,7 +106,6 @@ func (r *postgresRepo) Update(ctx context.Context, t *Todo) error {
 	}
 	return nil
 }
-
 func (r *postgresRepo) Delete(ctx context.Context, id int64) error {
 	res, err := r.pool.Exec(ctx, "DELETE FROM todos WHERE id = $1", id)
 	if err != nil {

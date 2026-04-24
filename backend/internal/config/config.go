@@ -67,7 +67,7 @@ func Load() (*Config, error) {
 				Port:     pgPort,
 				User:     getEnv("POSTGRES_USER", "postgres"),
 				Password: getEnv("POSTGRES_PASSWORD", "postgres"),
-				DB:       getEnv("POSTGRES_DB", "workspace"),
+				DB:       getEnv("POSTGRES_DB", "haven"),
 			},
 			Redis: RedisConfig{
 				Host:     getEnv("REDIS_HOST", "localhost"),

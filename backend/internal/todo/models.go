@@ -7,9 +7,8 @@ type Priority string
 const (
 	PriorityLow    Priority = "low"
 	PriorityMedium Priority = "medium"
-	PriorityHight  Priority = "high"
+	PriorityHigh   Priority = "high"
 )
-
 type Todo struct {
 	ID          int64      `json:"id" db:"id"`
 	Title       string     `json:"title" db:"title"`
