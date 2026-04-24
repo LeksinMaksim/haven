@@ -11,14 +11,14 @@ const (
 )
 
 type Todo struct {
-	ID          int64      `json:"id"`
-	Title       string     `json:"title"`
-	Description string     `json:"description,omitempty"`
-	Done        bool       `json:"done"`
-	Priority    Priority   `json:"priority"`
-	DueDate     *time.Time `json:"due_date,omitempty"`
-	CreatedAt   time.Time  `json:"created_at"`
-	UpdatedAt   time.Time  `json:"updated_at"`
+	ID          int64      `json:"id" db:"id"`
+	Title       string     `json:"title" db:"title"`
+	Description string     `json:"description,omitempty" db:"description"`
+	Done        bool       `json:"done" db:"done"`
+	Priority    Priority   `json:"priority" db:"priority"`
+	DueDate     *time.Time `json:"due_date,omitempty" db:"due_date"`
+	CreatedAt   time.Time  `json:"created_at" db:"created_at"`
+	UpdatedAt   time.Time  `json:"updated_at" db:"updated_at"`
 }
 
 type CreateRequest struct {
