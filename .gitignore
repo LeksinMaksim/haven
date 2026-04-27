@@ -1,0 +1,37 @@
+# Binaries and build artifacts
+backend/tmp/
+backend/coverage.out
+bin/
+obj/
+
+# Go specific
+vendor/
+*.test
+*.out
+go.work
+
+# Environment variables (contains secrets)
+.env
+.env.local
+.env.*.local
+backend/.env
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs and Editors
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Docker
+docker-compose.override.yml
