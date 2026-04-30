@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+body {
+    font-family: monospace; /* Моноширинный шрифт */
+    margin: 0;
+    padding: 0;
+}
